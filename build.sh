@@ -377,7 +377,11 @@ case "$DEVICE" in
   kvim1|kvim2|kvim3) echo 'Writing Khadas Image File'
     check_os_release "armv7" "$VERSION" "$DEVICE"
     sh scripts/kvimsimage.sh -v "$VERSION" -p "$PATCH" -a armv7 -m ${DEVICE}
-
+    ;;
+  "") echo 'No device specified'
+    ;;
+  *) echo Unknown/Unsupported device: $DEVICE
+    exit 1
     ;;
 esac
 
