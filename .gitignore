@@ -1,0 +1,17 @@
+# Build system specific
+build
+logs
+platform-*
+patch-*
+
+# We don't need logs and image artefacts
+*.log
+*.zip
+*.img*
+*.tar*
+# Selective ignore
+.ignore_dir
+
+
+#
+.DS_Store
